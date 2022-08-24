@@ -1,0 +1,132 @@
+.about {
+  margin-top: 10rem;
+}
+
+.container-about {
+  display: grid;
+  grid-template-columns: 40% 55%;
+}
+
+.me {
+  margin: 0 auto;
+  width: 70%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-green),
+    transparent
+  );
+  display: grid;
+  place-items: center;
+}
+
+.me-image {
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+}
+
+.me-image:hover {
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+}
+
+.content .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.content .card {
+  border: 2px solid var(--color-green);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.content .card:hover {
+  border: 2px dashed var(--color-green);
+  cursor: default;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.content .icon {
+  color: var(--color-green);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content .card h5 {
+  font-size: 1rem;
+}
+
+.content .card small {
+  font-size: 0.9rem;
+  color: var(--color-light);
+}
+
+.content p {
+  margin: 1.5rem 0 2.6rem;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: var(--color-light);
+}
+
+@media screen and (max-width: 1024px) {
+  .container-about {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .me {
+    width: 50%;
+    margin: 2rem auto 4rem;
+  }
+
+  .content p {
+    margin: 1rem 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .me {
+    width: 65%;
+    margin: 0rem auto 3rem;
+  }
+
+  .content .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .content p {
+    margin: 1.5rem 0;
+  }
+}

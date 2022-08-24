@@ -1,0 +1,39 @@
+.skills {
+  margin-top: 5rem;
+}
+
+.skills .skill {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30%;
+  margin: 0 auto;
+  padding: 3rem;
+  border: 2px solid var(--color-green);
+  max-width: 40%;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.skills .skill:hover {
+  border: 2px dashed var(--color-green);
+}
+
+.skills .skill .detail {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 5%;
+}
+
+.skills .skill .detail .skill-icon {
+  font-size: 1.2rem;
+  color: var(--color-green);
+}
+
+.skills .skill .left .detail:not(:last-child),
+.skills .skill .right .detail:not(:last-child) {
+  margin-bottom: 2rem;
+}
